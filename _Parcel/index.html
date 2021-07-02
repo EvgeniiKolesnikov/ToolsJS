@@ -9,6 +9,45 @@
   <title>Parcel</title>
 </head>
 <body>
-  
+  <main class="wrapper">
+  <div class="steps">
+    <p class="steps__step step">
+      <p class="step__title">Install Parcel <br> <i>В новой версии 1.12.5 всё работает нормально</i></p>
+      <p class="step__info">- поставить новую <b class="step__pick">npm install -g parcel-bundler</b></p>
+      <p class="step__info">- или нужную версию <b class="step__pick">npm install -g parcel-bundler@1.12.5</b></p>
+      <p class="step__info">- или локально <b class="step__pick">npm install parcel-bundler --save-dev</b></p> 
+      <p>Флаг --save-dev указывается, что информацию о пакете следует сохранить именно в секции devDependencies файла package.json:</p>
+      <p class="step__info">- удалить старую <b class="step__pick">npm uninstall -g parcel-bundler</b></p>
+    </p>
+
+    <p class="steps__step step">
+      <p class="step__title">Create a package.json</p>
+      <p class="step__info">- поставить новую <b class="step__pick">npm init -y</b></p>
+    </p>
+
+    <p class="steps__step step">
+      <p class="step__title">Create an index.html and index.js</p>
+    </p>
+
+    <p class="steps__step step">
+      <p class="step__title">Run/Build</p>
+      <p class="step__info">- запуск <b class="step__pick">parcel index.html</b></p>
+      <p class="step__info">- сборка <b class="step__pick">parcel build index.html</b></p>
+      <p class="step__info">- или <b class="step__pick">npm run имя_скрипта</b></p>
+    </p>
+
+    <p class="steps__step step">
+      <p class="step__title">Preferences</p>
+      <p class="step__info">В Parcel по умолчанию не работает async/await. Лечится добавлением в package.json:</p>
+      <p class="step__info">"browserslist": ["last 1 Chrome version"]</p>
+      <p class="step__info">или каким-либо из этих способов: <a class="link" href="https://flaviocopes.com/parcel-regeneratorruntime-not-defined/" target="_blank">https://flaviocopes.com/parcel-regeneratorruntime-not-defined/</a></p>
+    </p>
+
+  </div>
+
+  <div class="resourses">
+    <a class="link" href="https://habr.com/ru/company/ruvds/blog/423703/" target="_blank">Руководство</a> по Node.js, часть 4: npm, файлы package.json и package-lock.json
+  </div>
+</main>
 </body>
 </html>
