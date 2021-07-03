@@ -5,4 +5,6 @@ function addTitle() {
   const body = document.querySelector('body')
   body.insertAdjacentHTML("afterbegin", `<h1>${title}</h1>`)
 }
+
+
 addTitle()
