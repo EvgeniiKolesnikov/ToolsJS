@@ -11,33 +11,62 @@
 <body>
   <main class="wrapper">
     <div class="steps">
-      <p class="steps__step step">
-        <p class="step__title">Install ESLint</p>
-        <p class="step__info">- поставить новую локально <b class="step__pick">npm install eslint --save-dev</b></p>
-      </p>
+      <div class="steps__step step">
+        <p class="step__title">Install ESLint (local)</p>
+        <p class="step__info"><b class="step__pick">npm install eslint --save-dev</b></p>
+      </div>
   
-      <p class="steps__step step">
-        <p class="step__title">Create a package.json</p>
-        <p class="step__info">- Создать новый <b class="step__pick">npm init -y</b></p>
-      </p>
+      <div class="steps__step step">
+        <p class="step__title">Create a new package.json</p>
+        <p class="step__info"><b class="step__pick">npm init -y</b></p>
+      </div>
   
-      <p class="steps__step step">
+      <div class="steps__step step">
         <p class="step__title">Add configuration file</p>
         <p class="step__info"><b class="step__pick">npx eslint --init</b></p>
-        <p>✔ How would you like to use ESLint? · 3 style</p> 
-        <p>✔ What type of modules does your project use? · 1 esm (JS Modules)</p>
-        <p>✔ Which framework does your project use? · 3 none</p>
+        <p>✔ How would you like to use ESLint? · 3 · style</p> 
+        <p>✔ What type of modules does your project use? · 1 · esm (JS Modules)</p>
+        <p>✔ Which framework does your project use? · 3 · none</p>
         <p>✔ Does your project use TypeScript? · No</p>
         <p>✔ Where does your code run? · 1 Browser</p>
-        <p>✔ How would you like to define a style for your project? · 1 guide</p>
-        <p>✔ Which style guide do you want to follow? · 1 airbnb</p>
-        <p>✔ What format do you want your config file to be in? · 3 JSON</p>
+        <p>✔ How would you like to define a style for your project? · 1 · guide</p>
+        <p>✔ Which style guide do you want to follow? · 1 · airbnb</p>
+        <p>✔ What format do you want your config file to be in? · 3 · JSON</p>
         <p>✔ Would you like to install them now with npm? · Yes</p>
-      </p>
+      </div>
+
+      <div class="steps__step step">
+        <p class="step__title">Result + some rules</p>
+        <p class="step__info"><b class="step__pick">.eslintrc.json</b></p>
+        <p class="code__level0">{</p>
+          <p class="code__level1">"env": {</p>
+            <p class="code__level2">"browser": true,</p>
+            <p class="code__level2">"es2021": true</p>
+          <p class="code__level1"> },</p>
+          <p class="code__level1"> "extends": [</p>
+            <p class="code__level2">"airbnb-base"</p>
+          <p class="code__level1"> ],</p>
+          <p class="code__level1"> "parserOptions": {</p>
+            <p class="code__level2">"ecmaVersion": 12,</p>
+            <p class="code__level2">"sourceType": "module"</p>
+          <p class="code__level1"> },</p>
+          <p class="code__level1"> "rules": {</p>
+            <p class="code__level2"> "linebreak-style": 0,</p>
+            <p class="code__level2"> "no-unused-vars": "warn",</p>
+            <p class="code__level2"> "no-var": "warn",</p>
+            <p class="code__level2"> "no-console": "off",</p>
+            <p class="code__level2"> "no-plusplus": "off",</p>
+            <p class="code__level2"> "no-restricted-syntax": "off",</p>
+            <p class="code__level2"> "semi": ["error", "always"],</p>
+            <p class="code__level2"> "quotes": ["error", "single"]</p>
+          <p class="code__level1"> }</p>
+        <p class="code__level0">}</p>
+      </div>
     </div>
   
     <div class="resourses">
-      <a class="link" href="https://eslint.org/docs/user-guide/getting-started" target="_blank">Руководство</a> по ESLint
+      <p class="resourses__info"><a class="link" href="https://eslint.org/docs/user-guide/getting-started" target="_blank">Руководство</a> по ESLint</p>
+      <p class="resourses__info"><a class="link" href="https://github.com/airbnb/javascript" target="_blank">Руководство</a> по стилю Airbnb</p>
     </div>
   </main>
 </body>
