@@ -6,3 +6,6 @@ function addTitle() {
   body.insertAdjacentHTML("afterbegin", `<h1>${title}</h1>`)
 }
 addTitle()
+
+const post = new Post('Webpack Post Title');
+console.log('Post to String', post.toString());
