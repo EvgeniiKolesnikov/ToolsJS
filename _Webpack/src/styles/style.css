@@ -1,4 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto';
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import "~normalize.css";
+@import "roboto.css";
 
 *, *:before, *:after {
   padding: 0;
@@ -67,4 +69,12 @@ margin-bottom: 7px;
 .code__level2 {
   margin-left: 30px;
   font-size: small;
+}
+
+.logo {
+  background-image: url("../assets/webpack-logo.png");
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
 }

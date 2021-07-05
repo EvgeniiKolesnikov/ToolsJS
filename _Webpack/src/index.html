@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <script src="analytics.js"></script>
-  <script src="Post.js"defer></script>
-  <script src="./index.js" defer></script>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
   <title>Webpack</title>
 </head>
 <body>
+  <hr>
+  <div class="logo"></div>
   <main class="wrapper">
     <div class="steps">
       <div class="step">
@@ -29,6 +28,59 @@
         <p class="step__info"><b class="step__pick">webpack.config.js</b></p>
       </div>
 
+      <div class="step">
+        <p class="step__title">Add minimal config</p>
+        <p class="code__level0">const path = require('path')</p>
+        <p class="code__level0">module.exports = {</p>
+          <p class="code__level1">entry: './src/index.js',</p>
+          <p class="code__level1">output: {</p>
+            <p class="code__level2">filename: 'bundle.js',</p>
+            <p class="code__level2">path: path.resolve(__dirname, 'dist')</p>
+          <p class="code__level1">}</p>
+        <p class="code__level0">};</p>
+      </div>
+
+      <div class="step">
+        <p class="step__title">First run</p>
+        <p class="step__info"><b class="step__pick">npx webpack --config webpack.config.js</b></p>
+      </div>
+
+      <div class="step">
+        <p class="step__title">Create a plugin</p>
+        <p class="step__info"><b class="step__pick">npm i -D html-webpack-plugin</b></p>
+      </div>
+
+      <div class="step">
+        <p class="step__title">Create a plugin for clear hash</p>
+        <p class="step__info"><b class="step__pick">npm i -D clean-webpack-plugin</b></p>
+      </div>
+
+      <div class="step">
+        <p class="step__title">Create style plugins</p>
+        <p class="step__info"><b class="step__pick">npm i -D style-loader css-loader</b></p>
+      </div>
+
+      <div class="step">
+        <p class="step__title">Create style normalize</p>
+        <p class="step__info"><b class="step__pick">npm i normalize.css</b></p>
+      </div>
+
+      <div class="step">
+        <p class="step__title">Create file loader</p>
+        <p class="step__info"><b class="step__pick">npm i -D file-loader</b></p>
+      </div>
+
+      <div class="step">
+        <p class="step__title">Create xml loader</p>
+        <p class="step__info"><b class="step__pick">npm i -D xml-loader</b></p>
+      </div>
+
+      <div class="step">
+        <p class="step__title">Create csv loader</p>
+        <p class="step__info"><b class="step__pick">npm i -D csv-loader</b></p>
+      </div>
+
+      <!--  -->
     </div>
   
     <div class="resourses">
