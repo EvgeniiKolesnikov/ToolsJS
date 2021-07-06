@@ -78,3 +78,7 @@ margin-bottom: 7px;
   width: 200px;
   margin: 0 auto;
 }
+
+.code {
+  color: firebrick;
+}
