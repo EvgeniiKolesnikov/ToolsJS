@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TesterWebpackPlugin = require('terser-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin');
 const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -46,13 +47,14 @@ const cssLoaders = extra => {
   return loaders
 }
 
-const babelOptions = () => {
 
+if (isDev) {
+  // only enable hot in development
+  plugins.push(new webpack.HotModuleReplacementPlugin())
+  // only enable eslint in development
+  plugins.push(new ESLintPlugin(options))
 }
-// if (isDev) {
-//   // only enable hot in development
-//   plugins.push(new webpack.HotModuleReplacementPlugin());
-// }
+
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -85,7 +87,6 @@ module.exports = {
   },
   devtool: isDev ? 'source-map' : false,
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HTMLWebpackPlugin({
       template: './index.html',
       minify: {
@@ -138,12 +139,13 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
-        use: {
+        use: [{
           loader: "babel-loader",
           options: {
             presets: ['@babel/preset-env']
           }
         }
+        ] 
       },
       {
         test: /\.m?ts$/,
