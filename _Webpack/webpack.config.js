@@ -48,14 +48,6 @@ const cssLoaders = extra => {
 }
 
 
-if (isDev) {
-  // only enable hot in development
-  plugins.push(new webpack.HotModuleReplacementPlugin())
-  // only enable eslint in development
-  plugins.push(new ESLintPlugin(options))
-}
-
-
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
@@ -169,4 +161,11 @@ module.exports = {
       }
     ]
   }
-};
+}
+
+if (isDev) {
+  // only enable hot in development
+  module.exports.plugins.push(new webpack.HotModuleReplacementPlugin());
+  // only enable eslint in development
+  module.exports.plugins.push(new ESLintPlugin());
+}
