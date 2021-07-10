@@ -174,7 +174,7 @@ module.exports = {
         }
       },
       {
-        test: /\.html$/i,
+        test: /\.html$/,
         loader: 'html-loader'
       }
     ]
@@ -183,7 +183,7 @@ module.exports = {
 
 if (isDev) {
   // only enable hot in development
-  module.exports.plugins.push(new webpack.HotModuleReplacementPlugin());
+  // module.exports.plugins.push(new webpack.HotModuleReplacementPlugin());
   // only enable eslint in development
   module.exports.plugins.push(new ESLintPlugin());
 }

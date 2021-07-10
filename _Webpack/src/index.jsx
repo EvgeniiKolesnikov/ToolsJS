@@ -9,10 +9,12 @@ import './babel.js'
 import './styles/style.css'
 import './styles/less.less'
 import './styles/scss.scss'
+import html from './index.html';
 
 // import json from './assets/json'
 // import xml from './assets/data.xml'
 // import csv from './assets/data.csv'
+
 
 
 console.log('Hello, world');
