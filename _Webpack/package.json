@@ -15,6 +15,7 @@
     "javascript",
     "webpack"
   ],
+  "browserslist": ["last 2 versions", "ios >= 8", "> 0.25%", "not dead", "IE 10"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
