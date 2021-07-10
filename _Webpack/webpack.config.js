@@ -11,9 +11,11 @@ const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
+const target = process.env.NODE_ENV === 'production' ? 'browserslist' : 'web';
 
 const optimization = () => {
   const config = {
+    runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all'
     }
@@ -79,6 +81,7 @@ const plugins = () => {
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
+  target: target,
   mode: 'development',
   entry: {
     main: ['@babel/polyfill', './index.jsx'],
@@ -86,7 +89,8 @@ module.exports = {
   },
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    clean: true
   },
   resolve: {
     extensions: ['.js', '.json', '.png'],
@@ -101,7 +105,7 @@ module.exports = {
   optimization: optimization(),
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 8080,
+    port: 9000,
     inline: true,
     hot: isDev,
     compress: true,
@@ -168,6 +172,10 @@ module.exports = {
             presets: ['@babel/preset-env', "@babel/preset-react"]
           }
         }
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader'
       }
     ]
   }
