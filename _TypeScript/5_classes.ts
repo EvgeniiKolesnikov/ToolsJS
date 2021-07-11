@@ -19,7 +19,7 @@ class Typescript {
 //   }
 // }
 
-// ТОЖЕ самое, только короче
+// Короткий вариант
 class Car {
   readonly numberOfWheels: number = 4
   constructor(readonly model: string) {}

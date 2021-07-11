@@ -26,6 +26,10 @@ h1 {
   text-align: center;
 }
 
+.steps {
+  margin-top: 20px;
+}
+
 .step {
   margin-bottom: 20px;
 }
