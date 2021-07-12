@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+  <title>JSHint</title>
+</head>
+<body>
+  <main class="wrapper">
+    <div class="steps">
+      <div class="steps__step step">
+        <p class="step__title">Install JSHint (local or global)</p>
+        <p class="step__info"><b class="step__pick">npm i -D jshint</b></p>
+      </div>
+  
+      <div class="steps__step step">
+        <p class="step__title">Create a new package.json</p>
+        <p class="step__info"><b class="step__pick">npm init -y</b></p>
+      </div>
+  
+      <div class="steps__step step">
+        <p class="step__title">Add configuration file</p>
+        <p class="step__info">Create <b class="step__pick">.jshintrc</b></p>
+      </div>
+
+      <div class="steps__step step">
+        <p class="step__title">Add some rules</p>
+        <p class="step__info"><b class="step__pick">.jshintrc</b></p>
+        <p class="code__level0">{</p>
+          <p class="code__level1">"camelcase": true, // Названия переменных в camelCase стиле</p>
+          <p class="code__level1">"indent": 2, </p>
+          <p class="code__level1">"undef": true, // Все не глобальные переменные должны быть объявлены до их использования.</p>
+          <p class="code__level1">"quotmark": false, // Согласованность стиля кавычек</p>
+          <p class="code__level1">"maxlen": 120, // Максимальная длина строки</p>
+          <p class="code__level1">"trailing": true, // Запрещены пробелы на концах.</p>
+          <p class="code__level1">"curly": true, // Фигурные кавычки обязательны для каждого нового блока или области.</p>
+          <p class="code__level1">"strict": false, // Обязательно строгое использование.</p>
+          <p class="code__level1">"browser": true, // Стандартный браузер `window`, `document`.</p>
+          <p class="code__level1">"devel": true, // Разрешена панель разработчика `console.log();`.</p>
+          <p class="code__level1">"jquery": true, // Опция определяет глобальные переменные, предоставляемые библиотекой jQuery.</p>
+          <p class="code__level1">"esversion": 8, // Включить функции, представленные в ECMAScript 8.</p>
+          <p class="code__level1">"node": true // Определяет доступные глобальные переменные.</p> 
+        <p class="code__level0">}</p>
+      </div>
+    </div>
+  
+    <div class="resourses">
+      <p class="resourses__info"><a class="link" href="https://jshint.com/" target="_blank">Руководство</a> по JSHint</p>
+    </div>
+  </main>
+</body>
+</html>
